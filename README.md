@@ -1,5 +1,7 @@
 # 🎮 Valorant Stats Card
+## 🎯 My Valorant Stats
 
+![My Valorant Card](https://valorant-tracker-nu.vercel.app/api/card?name=noobshooter&tag=2169&region=ap)
 Dynamic SVG card showing your Valorant stats — rank, K/D, win rate, headshot %, top agent, and more. Designed for GitHub profile READMEs.
 
 ![preview](https://img.shields.io/badge/Preview-Click_to_see-FF4655?style=for-the-badge)
