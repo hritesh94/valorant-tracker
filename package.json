@@ -1,0 +1,10 @@
+{
+  "name": "valorant-stats-card",
+  "version": "1.0.0",
+  "description": "Dynamic Valorant stats SVG card for GitHub README",
+  "author": "Hritesh Goldar",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
