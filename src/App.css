@@ -1,0 +1,278 @@
+/* ===== Layout ===== */
+.app {
+  min-height: 100vh;
+  background: #0f0f14;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* ===== Header ===== */
+.header {
+  background: linear-gradient(135deg, #1a0a0a 0%, #0f0f14 60%, #0a0a1a 100%);
+  border-bottom: 2px solid #ff4655;
+  padding: 24px 32px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(255, 70, 85, 0.25);
+}
+
+.header-content {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0 0 4px;
+  color: #e0e0e0;
+}
+
+.logo-accent {
+  color: #ff4655;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ===== Search ===== */
+.search {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #333;
+  background: #1a1a2e;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search:focus {
+  border-color: #ff4655;
+}
+
+/* ===== Role filters ===== */
+.role-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.role-btn {
+  padding: 5px 14px;
+  border-radius: 4px;
+  border: 1px solid #333;
+  background: #1a1a2e;
+  color: #aaa;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.role-btn:hover {
+  border-color: #ff4655;
+  color: #ff4655;
+}
+
+.role-btn.active {
+  background: #ff4655;
+  border-color: #ff4655;
+  color: #fff;
+}
+
+/* ===== Main / Grid ===== */
+.main {
+  padding: 32px;
+}
+
+.status {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #888;
+  padding: 48px 0;
+}
+
+.status.error {
+  color: #ff4655;
+}
+
+.agents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* ===== Agent Card ===== */
+.agent-card {
+  background: #16161e;
+  border: 1px solid #2a2a3e;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.agent-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(255, 70, 85, 0.2);
+  border-color: #ff4655;
+}
+
+.agent-banner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 140px;
+  padding-bottom: 0;
+  background: #1a1a2e;
+}
+
+.agent-portrait {
+  height: 130px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.agent-info {
+  padding: 12px 16px 16px;
+}
+
+.agent-role {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+  font-size: 0.72rem;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.role-icon {
+  width: 14px;
+  height: 14px;
+  opacity: 0.75;
+  filter: invert(1);
+}
+
+.agent-name {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 14px;
+}
+
+/* ===== Abilities Grid ===== */
+.abilities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+/* ===== Ability Card ===== */
+.ability-card {
+  position: relative;
+  background: #1e1e2e;
+  border: 1px solid #2a2a3e;
+  border-radius: 6px;
+  padding: 8px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.ability-card:hover {
+  background: #2a1a1e;
+  border-color: #ff4655;
+}
+
+.ability-key {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #ff4655;
+  letter-spacing: 0.05em;
+}
+
+.ability-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 4px rgba(255, 70, 85, 0.4));
+}
+
+.ability-name {
+  font-size: 0.62rem;
+  color: #bbb;
+  text-align: center;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+/* ===== Tooltip ===== */
+.ability-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  background: #0f0f14;
+  border: 1px solid #ff4655;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 0.75rem;
+  color: #ddd;
+  line-height: 1.5;
+  z-index: 200;
+  pointer-events: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+.ability-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #ff4655;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .header {
+    padding: 16px;
+  }
+
+  .main {
+    padding: 16px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+}
